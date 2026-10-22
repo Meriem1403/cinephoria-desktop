@@ -1,9 +1,10 @@
+import os
 import ttkbootstrap as tb
 from ttkbootstrap.constants import *
 from ttkbootstrap.tableview import Tableview
 import requests
 
-API_URL = "http://192.168.1.103:8000/api-client"
+API_URL = os.environ.get("API_URL", "http://localhost:8000/api-client")
 
 app = tb.Window(themename="superhero")
 app.title("Cinéphoria Employee Dashboard")
